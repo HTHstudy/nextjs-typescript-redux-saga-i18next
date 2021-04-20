@@ -1,0 +1,10 @@
+{
+  "forgotpassword": "Forgot password",
+  "notactivate": "The username is not activated. Check the email.",
+  "notexist": "The username not existed.",
+  "password": "Password",
+  "signin": "Sign In",
+  "signup": "Sign Up",
+  "username": "Username",
+  "wrongpassword": "The password was wrong."
+}

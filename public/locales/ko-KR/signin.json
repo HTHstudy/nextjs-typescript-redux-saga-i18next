@@ -1,0 +1,10 @@
+{
+  "forgotpassword": "비밀번호를 잊어버렸어요.",
+  "notactivate": "활성화되지 않은 계정입니다. 이메일을 확인하세요.",
+  "notexist": "등록되지 않은 아이디입니다.",
+  "password": "비밀번호",
+  "signin": "로그인",
+  "signup": "회원가입",
+  "username": "아이디",
+  "wrongpassword": "비밀번호가 맞지않습니다."
+}
