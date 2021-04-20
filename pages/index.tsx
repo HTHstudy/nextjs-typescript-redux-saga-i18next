@@ -9,7 +9,7 @@ import { END } from 'redux-saga'
 import { wrapper } from '../core/redux/store'
 import { loadData } from '../core/redux/actions/sampledata'
 import Layout from '../components/Layouts/Layout'
-import UserList from "../components/UserList";
+import UserList from '../components/UserList'
 
 const Home: NextPage = () => {
   const { t } = useTranslation('home')
