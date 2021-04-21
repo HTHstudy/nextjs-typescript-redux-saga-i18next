@@ -37,6 +37,11 @@ const Header = () => {
             <a className="nav-link">{t('counter')}</a>
           </Link>
         </NavItem>
+        <NavItem>
+          <Link href="/blog">
+            <a className="nav-link">테스트</a>
+          </Link>
+        </NavItem>
       </Nav>
     </header>
   )
