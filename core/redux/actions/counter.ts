@@ -1,13 +1,13 @@
-import { actionTypesCounter } from '../../interfaces/counter/counterAct.interfaces'
+import { actionTypesCounter, CounterIncrement, CounterDecrement, CounterReset } from '../../interfaces/counter/counterAct.interfaces'
 
-export function counterIncrement() {
+export function counterIncrement(): CounterIncrement {
   return { type: actionTypesCounter.COUNTER_INCREMENT }
 }
 
-export function counterDecrement() {
+export function counterDecrement(): CounterDecrement {
   return { type: actionTypesCounter.COUNTER_DECREMENT }
 }
 
-export function counterReset() {
+export function counterReset(): CounterReset {
   return { type: actionTypesCounter.COUNTER_RESET }
 }

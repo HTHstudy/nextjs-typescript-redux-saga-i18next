@@ -1,39 +1,15 @@
-import { HYDRATE } from 'next-redux-wrapper'
-import { CounterState, actionTypesCounter, ActionsCounter } from '../../interfaces'
+import { actionTypesCounter, ActionsCounter } from '../../interfaces'
 
-export const initialState: CounterState = {
-  count: 0,
-}
-
-interface HydratePayload {
-  counter: CounterState
-}
-
-const counter = (state = initialState, action: ActionsCounter | { type: typeof HYDRATE; payload: HydratePayload }): CounterState => {
+const counter = (state = 0, action: ActionsCounter): number => {
   switch (action.type) {
-    case HYDRATE: {
-      const nextState = { ...state, ...action.payload.counter }
-      if (state.count) nextState.count = state.count
-      return nextState
-    }
-
     case actionTypesCounter.COUNTER_INCREMENT:
-      return {
-        ...state,
-        ...{ count: state.count + 1 },
-      }
+      return state + 1
 
     case actionTypesCounter.COUNTER_DECREMENT:
-      return {
-        ...state,
-        ...{ count: state.count - 1 },
-      }
+      return state - 1
 
     case actionTypesCounter.COUNTER_RESET:
-      return {
-        ...state,
-        ...{ count: initialState.count },
-      }
+      return 0
 
     default:
       return state

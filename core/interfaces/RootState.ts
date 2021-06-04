@@ -1,6 +1,6 @@
-import { CounterState, SampleData } from './index'
+import { SampleData } from './index'
 
 export interface RootStateInterface {
-  counter: CounterState
+  counter: number
   sampledata: SampleData
 }

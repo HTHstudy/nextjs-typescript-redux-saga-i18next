@@ -1,25 +1,11 @@
-import { HYDRATE } from 'next-redux-wrapper'
-import { SampleData, actionTypesSampleData, ActionsUsers, User } from '../../interfaces'
+import { SampleData, actionTypesSampleData, ActionsUsers } from '../../interfaces'
 
 export const initialState: SampleData = {
   users: null,
 }
 
-interface HydratePayload {
-  sampledata: SampleData
-}
-
-const sampledata = (state = initialState, action: ActionsUsers | { type: typeof HYDRATE; payload: HydratePayload }): SampleData => {
+const sampledata = (state = initialState, action: ActionsUsers): SampleData => {
   switch (action.type) {
-    case HYDRATE: {
-      const nextState = {
-        ...state,
-        ...action.payload.sampledata,
-      }
-      if (state.users) nextState.users = state.users
-      return nextState
-    }
-
     case actionTypesSampleData.FAILURE:
       return {
         ...state,
